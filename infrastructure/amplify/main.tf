@@ -31,7 +31,7 @@ resource "aws_amplify_app" "serverless_app" {
           commands:
             - yarn run build
       artifacts:
-        baseDirectory: build
+        baseDirectory: ai-recipe-generator/dist
         files:
           - '**/*'
       cache:
