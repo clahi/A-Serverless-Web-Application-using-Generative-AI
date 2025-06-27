@@ -17,6 +17,7 @@ resource "aws_amplify_app" "serverless_app" {
   repository = "https://github.com/clahi/A-Serverless-Web-Application-using-Generative-AI"
 
   # The default build_spec added by the Amplify Console for React.
+  # Required to install node v 20 for this particular app
   build_spec = <<-EOT
     version: 0.1
     frontend:
