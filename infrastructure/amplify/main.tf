@@ -23,12 +23,13 @@ resource "aws_amplify_app" "serverless_app" {
       phases:
         preBuild:
           commands:
-            - cd ai-recipe-generator/
-            - ls
-            - npm install
+            - cd ai-recipe-generator
+            - nvm install 20
+            - nvm use 20
+            - yarn install
         build:
           commands:
-            - npm run build
+            - yarn run build
       artifacts:
         baseDirectory: build
         files:
