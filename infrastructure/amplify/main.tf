@@ -25,8 +25,6 @@ resource "aws_amplify_app" "serverless_app" {
         preBuild:
           commands:
             - cd ai-recipe-generator
-            - nvm install 20
-            - nvm use 20
             - yarn install
         build:
           commands:
